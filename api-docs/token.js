@@ -4,19 +4,19 @@ const schema = {
   type: "object",
   properties: {
     _Identity: {
-      type: "string",
+      type: "string", // Palindrome string and encrypted with project algo
     },
   },
 };
 
 module.exports = {
-  "/token": {
+  "/auth/token": {
     post: {
       tags: ["Auth"],
-      summary: "Login into the system",
-      description: `Get CSRF from the system`,
+      summary: "Create a new identity into the system",
+      description: `This API creates a new identity into system collection`,
       requestBody: {
-        description: "Create a new CSRF into the system",
+        description: "Create a new identity into the system",
         content: {
           "application/json": {
             schema: schema,
@@ -32,23 +32,14 @@ module.exports = {
               schema: schema,
               example: {
                 status: "success",
-                data: "jtmyBjoVgFdHICaipzxJOA==",
+                data: "0/pM4HgOmCup31tuxQqwJw==",
               },
             },
           },
         },
-        400: {
-          description: "Missing field(s)",
-          content: {
-            msg: "Missing field(s)",
-            location: "body",
-          },
-        },
         403: {
-          content: {
-            status: "fail",
-            data: "Forbidden",
-          },
+          description: "Forbidden",
+          content: {},
         },
       },
     },

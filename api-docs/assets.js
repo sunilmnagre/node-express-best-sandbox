@@ -91,7 +91,7 @@ module.exports = {
             },
           },
         },
-        403: {
+        401: {
           description: "Authorization failed",
           content: {},
         },
@@ -130,8 +130,7 @@ module.exports = {
                   menuLink: "audits",
                   parent: "Settings",
                   status: 1,
-                  createdAt: "2020-10-29T13:42:19.718Z",
-                  updatedAt: "2020-10-30T08:04:12.201Z",
+                  modifiedAt: "2020-10-29T13:42:19.718Z",
                 },
               },
             },
@@ -150,7 +149,7 @@ module.exports = {
     },
   },
 
-  "/menus/{id}": {
+  "/assets/{id}": {
     get: {
       tags: ["Assets"],
       summary: "Returns record by specified id",
@@ -174,7 +173,7 @@ module.exports = {
             properties: {
               fields: {
                 type: "string",
-                example: "name,menuLink",
+                example: "name",
               },
             },
           },
@@ -196,8 +195,7 @@ module.exports = {
                   menuLink: "audits",
                   parent: "Settings",
                   status: 1,
-                  createdAt: "2020-10-29T13:42:19.718Z",
-                  updatedAt: "2020-10-30T08:04:12.201Z",
+                  modifiedAt: "2020-10-29T13:42:19.718Z",
                 },
               },
             },

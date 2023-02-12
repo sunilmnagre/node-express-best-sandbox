@@ -13,23 +13,14 @@ const { validateRules } = require("./generic");
 const _post = (request, response, next) => {
   // Define rule for each params
   const rules = [
-    check("firstname")
+    check("title")
       .exists()
-      .withMessage("firstname - Missing field")
+      .withMessage("title - Missing field")
       .isString()
-      .withMessage("firstname - Must be string")
+      .withMessage("title - Must be string")
       .trim()
       .notEmpty()
-      .withMessage("firstname - Required field"),
-
-    check("lastname")
-      .exists()
-      .withMessage("lastname - Missing field")
-      .isString()
-      .withMessage("lastname - Must be string")
-      .trim()
-      .notEmpty()
-      .withMessage("lastname - Required field"),
+      .withMessage("title - Required field"),
   ];
 
   // Lets validate request

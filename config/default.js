@@ -5,7 +5,7 @@ const SERVER_IP = "127.0.0.1",
 
 module.exports = {
   settings: {
-    baseURL: `${PROTOCOL}://${SERVER_IP}:` + process.env.PORT || 8001,
+    baseURL: `${PROTOCOL}://${SERVER_IP}:` + (process.env.PORT || 8001),
   },
   vault: {
     key:
