@@ -1,4 +1,4 @@
-# Welcome to <project> Nodejs Express Sandbox with MC (Model & Controller)
+# Welcome to Nodejs Express Sandbox
 
 This boilerplate provides the ready structure to start developing the API. It has a good structure to support the MC pattern that allows developers to separate code into multiple files.
 
@@ -45,9 +45,12 @@ _Install npm packages_
 _To start app:_
 
     $ IV=<IV> ENCRYPTION_KEY=<Encryption_Key> pm2 start server.js --watch
-    eg: ENCRYPTION_KEY = hFHXD29uVdsMDwz23I62hHw/PZZmzDtG7nAvJAzzyxg=
-        IV = TE0a4eBLVmMV2E6t
-    --watch is the option for continue development
+
+ENCRYPTION_KEY = hFHXD29uVdsMDwz23I62hHw/PZZmzDtG7nAvJAzzyxg=
+
+IV = TE0a4eBLVmMV2E6t
+
+--watch is the option for continue development
 
 It is mandatory to pass **ENCRYPTION_KEY** and **IV** parameters as they are required for decrypting the configuration variables
 It is optional to pass **SECURE** parameter to start the app in a secure mode.
@@ -62,8 +65,6 @@ Simplify API development for users, teams, and enterprises with the Swagger open
 
 **http://localhost:{portNo}/api-docs**
 
-Swagger UI
-
 <p align="center">
         <img src="assets/swagger.png" width="1000" alt="Swagger Docs" />
 </p>
@@ -74,8 +75,8 @@ Swagger UI
 
 Auth is implemented using Polindrome Algorithm. To get the token, you need to pass a palindrome string ex:
 
-    _a) madam_
-    _b) radar_
+    a) madam
+    b) radar
 
 _Navigate to folder and run following_
 
