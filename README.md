@@ -62,6 +62,14 @@ Simplify API development for users, teams, and enterprises with the Swagger open
 
 **http://localhost:{portNo}/api-docs**
 
+Swagger UI
+
+<p align="center">
+        <img src="assets/swagger.png" width="1000" alt="Swagger Docs" />
+</p>
+
+---
+
 ## Authentication and Authorization
 
 Auth is implemented using Polindrome Algorithm. To get the token, you need to pass a palindrome string ex:
